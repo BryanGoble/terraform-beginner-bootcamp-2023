@@ -1,6 +1,7 @@
 tasks:
   - name: terraform
     before: |
+      git config --global user.email $GIT_COMMITTER_EMAIL
       source ./bin/install_terraform_cli
   - name: aws-cli
     env:
